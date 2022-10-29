@@ -38,7 +38,7 @@ def recv():
 wifi = subprocess.check_output(['netsh', 'WLAN', 'show', 'interfaces'])
 data = wifi.decode('utf-8')
 wifi_ssid = "TELLO-F12FFA" #change this to tello wifi ssid
-#wifi_ssid = "LetsGoBrandon" #place holder for local wifi for compiling 
+#wifi_ssid = "HomeWiFi" #place holder for local wifi for compiling 
 if wifi_ssid in data: #will match partial strings (ie if input is HomeWif it will match HomeWifi)
     print("connected to {}".format(wifi_ssid))
 else:
